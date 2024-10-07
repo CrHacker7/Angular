@@ -1,7 +1,8 @@
 import './style.css';
 
 
-import './topics/07-import-export';
+import './topics/08-classes';
+// import './topics/07-import-export';
 // import './topics/06-function-desestructuring';
 // import './topics/05-basic-destructuring';
 // import './topics/04-homework-types';

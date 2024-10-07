@@ -32,10 +32,7 @@ const { author } = details; // otra manera es solo poner details en la desestruc
 // console.log( 'Song ', anotherSong );
 // console.log( 'Duration ', duration );
 // console.log( 'Author ', author);
-
-
 // console.log ( 'Author ', audioPlayer.details.author );  de esta manera es más tedioso
-
 
 const [ , , trunks = 'Not found' ]: string[] = ['Goku', 'Vegeta'];
 
