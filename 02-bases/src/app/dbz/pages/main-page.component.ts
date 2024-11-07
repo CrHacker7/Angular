@@ -22,7 +22,12 @@ export class MainPageComponent {
     }]; 
 
     onNewCharacter( character: Character ) :void {
-    console.log('MainPage');
-    console.log(character);
+    this.characters.push(character);
     }
+//*lo de abajo es un método para el borrado de un personaje
+    onDeleteCharacter( index: number ) {
+    this.characters.splice(index, 1); //borra un elemento a la vez
+    }
+
+
 }
