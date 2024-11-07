@@ -20,5 +20,9 @@ export class MainPageComponent {
         name: 'Trunks',
         power: 8500
     }]; 
-    
+
+    onNewCharacter( character: Character ) :void {
+    console.log('MainPage');
+    console.log(character);
+    }
 }
