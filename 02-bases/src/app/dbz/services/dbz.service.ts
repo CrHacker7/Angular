@@ -22,18 +22,19 @@ export class DbzService {
         name: 'Trunks',
         power: 8500
     }];
-
-    onNewCharacter(character: Character): void {
-
-        const newCharacter: Character = { id: uuid(), ...character}
-
-        this.characters.push(newCharacter);
-    }
+   
     //*lo de abajo es un método para el borrado de un personaje
    // onDeleteCharacter(index: number) {
       //  this.characters .splice(index, 1); //borra un elemento a la vez
     deleteCharacterById(id: string) {
         this.characters = this.characters.filter( character => character.id !== id );
+    }
+
+    addCharacter(character: Character): void {
+
+        const newCharacter: Character = { id: uuid(), ...character }
+
+        this.characters.push(newCharacter);
     }
 
     
