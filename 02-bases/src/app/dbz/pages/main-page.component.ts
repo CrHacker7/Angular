@@ -1,3 +1,4 @@
+import { DbzService } from './../services/dbz.service';
 import { Component } from '@angular/core';
 import { Character } from '../interfaces/character.interface';
 
@@ -7,27 +8,10 @@ import { Character } from '../interfaces/character.interface';
 })
 
 export class MainPageComponent {
-  
-    public characters: Character[] = [{
+  //*Esto hace la inyeccion de dependencia del servicio DbzService
+    constructor( public dbzService : DbzService ) {
+        
 
-        name: 'Goku',
-        power: 10000
-    },{
-        name: 'Vegeta',
-        power: 9500
-    },
-    {
-        name: 'Trunks',
-        power: 8500
-    }]; 
-
-    onNewCharacter( character: Character ) :void {
-    this.characters.push(character);
     }
-//*lo de abajo es un método para el borrado de un personaje
-    onDeleteCharacter( index: number ) {
-    this.characters.splice(index, 1); //borra un elemento a la vez
-    }
-
 
 }

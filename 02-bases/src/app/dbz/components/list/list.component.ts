@@ -18,12 +18,15 @@ export class ListComponent {
   @Output()
   //*dos maneras de hacerlo:
   //* public onDelete = new EventEmitter<number>();
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
   
   //TODO: EMITIR EL ID DEL PERSONAJE
-  onDeleteCharacter(index: number) :void {
-    this.onDelete.emit(index);
-   // console.log({index}); //para que aparezca la palabra index en consola
+  onDeleteCharacter(id?: string) :void {
+    if ( !id ) return;
+
+    console.log({ id });
+    this.onDelete.emit(id);
+   // console.log({index}); s//para que aparezca la palabra index en consola
   //  console.log('Personaje eliminado');
   };
 }
